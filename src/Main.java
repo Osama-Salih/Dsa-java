@@ -1,26 +1,25 @@
-import dsa.Graph;
+import dsa.WeightedGraph;
 
 public class Main {
     public static void main(String[] args) {
-        Graph g = new Graph();
-        g.addVertex("A");
-        g.addVertex("B");
-        g.addVertex("C");
-        g.addVertex("D");
-        g.addVertex("E");
-        g.addVertex("F");
+        WeightedGraph wg = new WeightedGraph();
+        wg.addVertex("A");
+        wg.addVertex("B");
+        wg.addVertex("C");
+        wg.addVertex("D");
+        wg.addVertex("E");
+        wg.addVertex("F");
 
-        g.addEdge("A", "B");
-        g.addEdge("A", "C");
-        g.addEdge("B", "D");
-        g.addEdge("C", "E");
-        g.addEdge("D","E");
-        g.addEdge("D","F");
-        g.addEdge("E","F");
 
-//        System.out.println(g.dftRecursive("A"));
-//        System.out.println(g.bft("A"));
+        wg.addEdge("A", "B", 4);
+        wg.addEdge("A", "C", 2);
+        wg.addEdge("B", "E", 3);
+        wg.addEdge("C", "D", 2);
+        wg.addEdge("C", "F", 4);
+        wg.addEdge("D", "E", 3);
+        wg.addEdge("D", "F", 1);
+        wg.addEdge("E", "F", 1);
 
-        g.print();
+        System.out.println(wg.shortestPath("A", "E"));
     }
 }

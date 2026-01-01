@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PriorityQueue {
-    private List<Nodee> heap;
+    public List<Nodee> heap;
 
     public PriorityQueue() {
         heap = new ArrayList<>();
