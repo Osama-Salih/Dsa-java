@@ -3,37 +3,28 @@ package arrays.topKFrequent;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class Solution {
 
     public int[] topKFrequent(int[] nums, int k) {
-        if (nums.length == k) {
-            return nums;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        Map<Integer, Integer> count = new HashMap<>();
-        for (int n: nums) {
-            count.put(n, count.getOrDefault(n, 0) + 1);
-        }
-
-        Queue<Integer> heap = new PriorityQueue<>(
-                (a, b) -> count.get(a) - count.get(b)
-        );
-
-        for (int n : count.keySet()) {
-            heap.add(n);
+        PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            heap.offer(new int[]{entry.getValue(), entry.getKey()});
             if (heap.size() > k) {
                 heap.poll();
             }
         }
 
-        int ans[] = new int[k];
+        int []res = new int[k];
         for (int i = 0; i < k; i++) {
-            ans[i] = heap.poll();
+            res[i] = heap.poll()[1];
         }
-
-        return ans;
+        return res;
     }
 }
 // O(n log k)
