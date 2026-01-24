@@ -2,15 +2,19 @@ package easy.validPalindrome;
 
 public class Solution {
     public boolean isPalindrome(String s) {
-        String str = s.toLowerCase().replaceAll("[^a-z0-9]", "");
-        int l = 0, r = str.length() - 1;
-
-        while(l < r) {
-            if (str.charAt(l) != str.charAt(r)) {
+        int left = 0, right = s.length() - 1;
+        while(left < right) {
+            while(left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+            while(left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+            if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
                 return false;
             }
-            l++;
-            r--;
+            left++;
+            right--;
         }
         return true;
     }
