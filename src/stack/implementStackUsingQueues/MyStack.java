@@ -1,0 +1,32 @@
+package stack.implementStackUsingQueues;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MyStack {
+    Queue<Integer> qu;
+
+    public MyStack() {
+        qu = new LinkedList<>();
+    }
+
+    public void push(int x) {
+        qu.offer(x);
+        for (int i = 0; i < qu.size() - 1; i++) {
+            qu.offer(qu.remove());
+        }
+
+    }
+
+    public int pop() {
+        return qu.poll();
+    }
+
+    public int top() {
+        return qu.peek();
+    }
+
+    public boolean empty() {
+        return qu.isEmpty();
+    }
+}
