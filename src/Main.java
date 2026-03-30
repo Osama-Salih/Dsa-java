@@ -1,14 +1,11 @@
 import linkedList.ListNode;
-
-import java.util.*;
-
 public class Main {
     public static void main(String[] args){
-//        ListNode list1 = new ListNode(9);
-//        list1.next = new ListNode(9);
-//        list1.next.next = new ListNode(9);
-//        list1.next.next.next = new ListNode(9);
-//        list1.next.next.next.next = new ListNode(9);
+        ListNode list1 = new ListNode(1);
+//        list1.next = new ListNode(2);
+//        list1.next.next = new ListNode(3);
+//        list1.next.next.next = new ListNode(4);
+//        list1.next.next.next.next = new ListNode(5);
 //        list1.next.next.next.next.next = new ListNode(9);
 //        list1.next.next.next.next.next.next = new ListNode(9);
 
@@ -16,9 +13,16 @@ public class Main {
 //        list2.next = new ListNode(9);
 //        list2.next.next = new ListNode(9);
 ////        list2.next.next.next = new ListNode(9);
-//        print(list1);
+//        print(reverseBetween(list1, 1, 3));
 //        System.out.println(findDuplicate(new int[]{1,3,4,2,2}));
     }
+
+
+
+
+
+
+
 
 
 
