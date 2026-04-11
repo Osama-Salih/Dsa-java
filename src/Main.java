@@ -1,7 +1,5 @@
 import trees.TreeNode;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args){
         BT bst = new BT();
