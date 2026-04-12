@@ -1,7 +1,7 @@
 import trees.TreeNode;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BT bst = new BT();
         bst.add(10);
         bst.add(7);
@@ -14,9 +14,9 @@ public class Main {
     }
 
 
-
     public static class BT {
         private TreeNode root;
+
         public void add(int value) {
             TreeNode newNode = new TreeNode(value);
             if (root == null) {
@@ -41,5 +41,7 @@ public class Main {
                 parent.right = newNode;
             }
         }
+
+
     }
 }
