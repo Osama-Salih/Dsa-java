@@ -41,7 +41,5 @@ public class Main {
                 parent.right = newNode;
             }
         }
-
-
     }
 }
