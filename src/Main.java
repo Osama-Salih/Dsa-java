@@ -10,7 +10,6 @@ public class Main {
         bst.add(9);
         bst.add(12);
 
-//        System.out.println(bst.postorderTraversal());
     }
 
 
