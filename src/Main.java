@@ -1,4 +1,5 @@
 import trees.TreeNode;
+import trees.binaryTreeMaximumPathSum.Solution;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -7,12 +8,17 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        BT bst = new BT();
-        bst.add(1);
-        bst.add(2);
-        bst.add(3);
-        bst.add(5);
-        bst.add(4);
+//        BT bst = new BT();
+//        bst.add(1);
+//        bst.add(2);
+//        bst.add(3);
+//        bst.add(5);
+//        bst.add(4);
+//        TreeNode root = new TreeNode(-15);
+//        root.left = new TreeNode(9);
+//        root.right = new TreeNode(20);
+//        root.right.left = new TreeNode(15);
+//        root.right.right = new TreeNode(7);
     }
 
     public static class BT {
