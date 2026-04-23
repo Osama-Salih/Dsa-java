@@ -1,9 +1,5 @@
 import heapPq.kthLargestElementInAStream.KthLargest;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
     public static void main(String[] args) {
         KthLargest kl = new KthLargest(3, new int[]{4, 5, 8, 2});
