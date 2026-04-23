@@ -1,4 +1,4 @@
-package heapPq.kthLargestElementInAStream.lastStoneWeight;
+package heapPq.lastStoneWeight;
 
 import java.util.PriorityQueue;
 
@@ -20,3 +20,5 @@ public class Solution {
         return maxHeap.isEmpty() ? 0 : maxHeap.peek();
     }
 }
+// t : O(n log n)
+// s : O(n)
