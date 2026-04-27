@@ -84,3 +84,6 @@ public class Twitter {
         }
     }
 }
+
+// t = O(F log F)
+// s = O(T + F)
