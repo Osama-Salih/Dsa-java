@@ -1,15 +1,7 @@
-public class Main {
-    private static class Tuple {
-        int first;
-        int second;
-        int third;
+import java.util.List;
+import java.util.PriorityQueue;
 
-        public Tuple(int first, int second, int third) {
-            this.first = first;
-            this.second = second;
-            this.third = third;
-        }
-    }
+public class Main {
     public static void main(String[] args) {
     }
 }
