@@ -25,6 +25,9 @@ public class BridgesInGraph {
           adj.get(v).add(u);
       }
 
+        vis = new boolean[n];
+        low = new int[n];
+        tin = new int[n];
       dfs(0, -1, adj);
       return bridges;
     }
